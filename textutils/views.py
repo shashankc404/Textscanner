@@ -1,23 +1,12 @@
-#made by shashank
-# from django.http import HttpResponse
-# def index(request):
-#     return HttpResponse("hello")
-# def about(request):
-#     return HttpResponse('''<h1>shashank <a href="http://www.google.com" target="_blank">button</a> <a href="http://www.youtube.com" target="_blank">button2</a></h1>''')
-#laying the pipeline
+
 from django.http import HttpResponse
 from django.shortcuts import render
 def index(request):
     return render(request,'index.html')
-# def removepunc(request):
-#     djtext = request.POST.get('text', 'default')
-#     print(djtext)
-#     return HttpResponse("remove punc")    
-# def capfirst(request):
-#     return HttpResponse("capatilize punc")       
+       
 def analyze(request):
 
-    # Get the text
+   
     djtext = request.POST.get('text', 'default')
     removepunc=request.POST.get('removepunc','off')
     fullcaps=request.POST.get('capatilize','off')
